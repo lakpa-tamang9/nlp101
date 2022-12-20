@@ -56,7 +56,7 @@ class TrainGPT2():
         ])
 
         
-        paths = [str(x) for x in Path("./ko_corpuss").glob("**/*.txt")]
+        paths = [str(x) for x in Path("./resources/ko_corpuss").glob("**/*.txt")]
         tokenizer.train(files=paths, trainer=trainer)
 
         save_path = './temp/tokenized_data'

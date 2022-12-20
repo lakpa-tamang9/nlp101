@@ -1,5 +1,5 @@
 from transformers import TFGPT2LMHeadModel, GPT2Tokenizer
-output_dir = "./working/gpt2_korean"
+output_dir = "./temps/gpt2_korean"
 tokenizer = GPT2Tokenizer.from_pretrained(output_dir)
 model = TFGPT2LMHeadModel.from_pretrained(output_dir)
 
