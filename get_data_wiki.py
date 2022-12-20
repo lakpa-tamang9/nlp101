@@ -34,6 +34,7 @@ def run(lang):
     origin = "https://dumps.wikimedia.org/{}wiki/latest/{}wiki-latest-pages-articles.xml.bz2".format(
         lang, lang
     )
+    # origin = "http://encykorea.aks.ac.kr/Contents/Item/E0049853"
     fname = "{}wiki-latest-pages-articles.xml.bz2".format(lang)
     file_path = tf.keras.utils.get_file(
         origin=origin, fname=fname, untar=False, extract=False
@@ -47,7 +48,7 @@ if __name__ == "__main__":
     ARGS_PARSER = argparse.ArgumentParser()
     ARGS_PARSER.add_argument(
         "--lang",
-        default="ko",
+        default="en",
         type=str,
         help="language code to download from wikipedia corpus",
     )
